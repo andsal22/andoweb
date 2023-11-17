@@ -1,0 +1,149 @@
+/* Set default styles for the entire page */
+body {
+   font-family: Arial, sans-serif; /* Set the default font family for the entire page */
+   margin: 0; /* Remove default margin */
+   padding: 0; /* Remove default padding */
+}
+
+/* Styles for the header section */
+header {
+   background-color: #333; /* Set background color for the header */
+   color: #fff; /* Set text color for the header */
+   text-align: center; /* Center-align text within the header */
+   padding: 20px; /* Add padding to the header */
+}
+
+/* Styles for the banner */
+.banner {
+   max-width: 800px; /* Set maximum width for the banner */
+   margin: 0 auto; /* Center the banner by setting left and right margins to auto */
+}
+
+/* Styles for the navigation bar */
+nav {
+   background-color: #555; /* Set background color for the navigation bar */
+   overflow: hidden; /* Clear any floated elements inside the navigation bar */
+}
+
+/* Styles for the navigation list */
+nav ul {
+   list-style-type: none; /* Remove default list styling */
+   margin: 0; /* Remove default margin */
+   padding: 0; /* Remove default padding */
+}
+
+/* Styles for each item in the navigation list */
+nav ul li {
+   float: left; /* Float the list items to create a horizontal layout */
+}
+
+/* Styles for the links in the navigation bar */
+nav ul li a {
+   display: block; /* Make the links block-level elements */
+   color: #fff; /* Set text color for the links */
+   text-align: center; /* Center-align text within the links */
+   padding: 14px 16px; /* Add padding to the links */
+   text-decoration: none; /* Remove default underline styling for links */
+}
+
+/* Hover styles for the navigation links */
+nav ul li a:hover {
+   background-color: #777; /* Change background color on hover */
+}
+
+/* Styles for dropdown menus */
+.dropdown {
+   display: inline-block; /* Display the dropdown as an inline block */
+}
+
+/* Styles for the dropdown content */
+.dropdown-content {
+   display: none; /* Initially hide the dropdown content */
+   position: absolute; /* Position the dropdown content absolutely */
+   background-color: #555; /* Set background color for the dropdown content */
+   min-width: 160px; /* Set minimum width for the dropdown content */
+   box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Add a box shadow for a subtle effect */
+   z-index: 1; /* Set a higher z-index to ensure the dropdown is above other elements */
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+/* Styles for the main content section */
+main {
+   display: flex; /* Use flexbox for the main content section */
+   flex-wrap: wrap; /* Allow content to wrap to the next line on smaller screens */
+   justify-content: space-between; /* Space elements evenly along the main axis */
+   max-width: 1200px; /* Set maximum width for the main content */
+   margin: 20px auto; /* Center the main content with top and bottom margin */
+}
+
+/* Styles for the main content area */
+.main-content {
+   width: 70%; /* Set the width of the main content area */
+   box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+/* Styles for the aside section */
+aside {
+   width: 25%; /* Set the width of the aside section */
+   background-color: #f1f1f1; /* Set background color for the aside section */
+   padding: 20px; /* Add padding to the aside section */
+   box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+/* Styles for the footer section */
+footer {
+   background-color: #333; /* Set background color for the footer */
+   color: #fff; /* Set text color for the footer */
+   text-align: center; /* Center-align text within the footer */
+   padding: 10px; /* Add padding to the footer */
+   position: fixed; /* Fix the footer at the bottom of the viewport */
+   bottom: 0; /* Align the footer to the bottom of the viewport */
+   width: 100%; /* Set the width of the footer to 100% */
+}
+
+* {
+   box-sizing: border-box;
+ }
+ 
+ /* Create two equal columns that floats next to each other */
+ .column {
+   float: left;
+   width: 50%;
+   padding: 10px;
+   height: 300px; /* Should be removed. Only for demonstration */
+ }
+ 
+ /* Clear floats after the columns */
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+
+/* for mobile devices */
+@media only screen and (max-width: 768px) {
+   body {
+       font-size: 18px; /* Increase font size for better readability on small screens */
+   }
+
+   nav ul li {
+       float: none; /* Remove float to stack list items vertically on small screens */
+   }
+
+   nav ul li a {
+       display: block; /* Make the links block-level on small screens */
+       text-align: left; /* Align text to the left on small screens */
+   }
+
+   .main-content {
+       width: 100%; /* Set the width of the main content area to 100% on small screens */
+   }
+
+   aside {
+       width: 100%; /* Set the width of the aside section to 100% on small screens */
+   }
+}
